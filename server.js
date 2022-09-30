@@ -1,9 +1,9 @@
-// mongodb+srv://MydataBase:Anes16082020@cluster0.2bvzcds.mongodb.net/?retryWrites=true&w=majority
-
-/*if(process.env.NODE_ENV !=='production'){
+ 
+/*
+if(process.env.NODE_ENV !== 'production'){
     require('dotenv').parse()
-}*/
-
+}
+*/
 require('dotenv').config()
 const express = require('express')
 const app = express()
@@ -32,5 +32,5 @@ app.use(bodyParser.urlencoded({limit :'10mb',extended : false}))
 app.use('/',indexRouter)
 app.use('/authors',authorRouter)
 
-app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT || 4000)
 
